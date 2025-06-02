@@ -1,13 +1,13 @@
 provider "aws" {
-region = "us-east-1"
+region = "us-west-1"
 }
 
 resource "aws_instance" "one" {
 count = 5
-ami = "ami-0ddc798b3f1a5117e"
+ami = "ami-024790dfd513f7950"
 instance_type = "t2.medium"
 key_name = "swikp"
-vpc_security_group_ids = ["sg-05f044979e305302e"]
+vpc_security_group_ids = ["sgr-03b1c34e8712e0906"]
 tags = {
 Name = var.instance_names[count.index]
 }
