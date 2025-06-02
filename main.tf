@@ -7,7 +7,9 @@ terraform {
   }
 }
 provider "aws" {
-region = "us-west-1"
+  region     = "us-west-2"
+  access_key = "access_key_ID"
+  secret_key = "AWS_SECRET_ACCESS_KEY"
 }
 resource "aws_instance" "one" {
 count = 5
