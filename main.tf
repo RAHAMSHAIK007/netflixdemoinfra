@@ -4,10 +4,10 @@ provider "aws" {
 
 resource "aws_instance" "one" {
   count                  = 4
-  ami                    = "ami-0360c520857e3138f"
-  instance_type          = "t2.medium"
-  key_name               = "Netflix"
-  vpc_security_group_ids = ["sg-0ead21b7862e54f9a"]
+  ami                    = "ami-0ecb62995f68bb549"
+  instance_type          = "c7i-flex.large"
+  key_name               = "rahamdocker"
+  vpc_security_group_ids = ["sg-046cd16cdb7a78595"]
   tags = {
     Name = var.instance_names[count.index]
   }
